@@ -5,18 +5,24 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
+    public float jumpForce;
+    public float gravityModifier;
 
     // Start is called before the first frame update
     void Start()
     {
         // Make player jump at start
         playerRb = GetComponent<Rigidbody>();
-        playerRb.AddForce(Vector3.up * 1000);
+        Physics.gravity *= gravityModifier;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Make player jump when player presses spacebar
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
         
     }
 }
