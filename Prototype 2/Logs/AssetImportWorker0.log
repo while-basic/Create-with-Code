@@ -4263,3 +4263,19 @@ Received Import Request.
 Start importing Assets/Scripts/SpawnManager.cs using Guid(3f44729227b304edfb94502d7755ade7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3beb640fd9bf89b4f1e4aa84e9830311') in 0.001521 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1288.045153 seconds.
+  path: Assets/Scripts/SpawnManager.cs
+  artifactKey: Guid(3f44729227b304edfb94502d7755ade7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SpawnManager.cs using Guid(3f44729227b304edfb94502d7755ade7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '946a3d9eae5af47528c04296eb684580') in 0.002870 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 70.929405 seconds.
+  path: Assets/Prefabs/SpawnManager.prefab
+  artifactKey: Guid(8f4c8e40e0e2c4203a6adf928a3d0a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/SpawnManager.prefab using Guid(8f4c8e40e0e2c4203a6adf928a3d0a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f9df0970470bddfd06c2d99e9eb91c8') in 0.031866 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
