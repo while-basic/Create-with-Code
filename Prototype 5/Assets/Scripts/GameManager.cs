@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
             int index = Random.Range(0, targets.Count);
             Instantiate(targets[index]);
 
-            UpdateScore(5);
         }
     }
 
