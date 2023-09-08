@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb; // player's rigid body, not visibile to outside methods
     public float jumpForce; // players jumping force
     public float gravityModifier; // controlls gravity
+    public bool isOnGround = true; // checks player is on ground
 
 
     // Start is called before the first frame update
@@ -22,9 +23,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // make player jump only when spacebar is pressed
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround) 
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); // applies different types of forces
+            isOnGround = false; 
         }
+    }
+
+    // returns value when player is back on ground
+    private void OnCollisionEnter(Collision collision) {
+        isOnGround = true;
     }
 }
