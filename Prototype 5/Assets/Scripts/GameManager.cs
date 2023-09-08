@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> targets;
     public float spawnRate = 1.0f;
     private int score;
-    public TextMeshProUGUI scoreText; // Corrected variable name
+    public TextMeshProUGUI scoreText; 
 
     // Start is called before the first frame update
     void Start()
