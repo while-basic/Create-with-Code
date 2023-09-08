@@ -5,11 +5,13 @@ using UnityEngine;
 public class RepeatBackground : MonoBehaviour
 {
     private Vector3 startPos; //position object starts at
+    private float repeatwidth; // width actually repeating when resetting position
 
     // Start is called before the first frame update
     void Start()
     {
-        startPos = transform.position;   
+        startPos = transform.position;
+        repeatwidth = GetComponent<BoxCollider>().size.x / 2; // divides background size for smooth repeat
     }
 
     // Update is called once per frame
