@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // make player jump only when spacebar is pressed
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround) 
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); // applies different types of forces
             isOnGround = false;
@@ -35,15 +35,20 @@ public class PlayerController : MonoBehaviour
     }
 
     // returns value when player is back on ground
-    private void OnCollisionEnter(Collision collision) {
+    private void OnCollisionEnter(Collision collision)
+    {
 
-        if(collision.gameObject.CompareTag("Ground")) 
+        if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-        } else if(collision.gameObject.CompareTag("Obstacle")) 
+        }
+        else if (collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Game Over");
             gameOver = true;
+            playerAnim.SetBool("Death_b", true);
+            playerAnim.SetInteger("DeathType_int", 1);
         }
     }
+
 }
