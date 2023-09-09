@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     private Animator playerAnim; // player's rigid body, not visibile to outside methods
     public ParticleSystem explosionParticle;
+    public AudioClip jumpSound;
+    public AudioClip crashSound;
+    public AudioClip testSound;
     public ParticleSystem dirtParticle;
     public float jumpForce; // players jumping force
     public float gravityModifier; // controlls gravity
