@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     private Animator playerAnim; // player's rigid body, not visibile to outside methods
     public ParticleSystem explosionParticle;
+    public ParticleSystem dirtParticle;
     public float jumpForce; // players jumping force
     public float gravityModifier; // controlls gravity
     public bool isOnGround = true; // checks player is on ground
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); // applies different types of forces
             isOnGround = false;
             playerAnim.SetTrigger("Jump_trig"); // activates jump animation trigger event
+            dirtParticle.Stop();
         }
     }
 
@@ -42,6 +44,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+            dirtParticle.Play();
         }
         else if (collision.gameObject.CompareTag("Obstacle"))
         {
@@ -50,6 +53,7 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetBool("Death_b", true);
             playerAnim.SetInteger("DeathType_int", 1);
             explosionParticle.Play();
+            dirtParticle.Stop();
         }
     }
 
